@@ -48,3 +48,17 @@ function knightMoves(start, end) {
     }
   }
 }
+
+// Reconstruct path from parent map
+function buildPath(start, end, parent) {
+  const path = [];
+  let current = end;
+
+  while (current.toString() !== start.toString()) {
+    path.push(current);
+    current = parent.get(current.toString());
+  }
+
+  path.push(start);
+  return path.reverse();
+}
