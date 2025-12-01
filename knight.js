@@ -15,3 +15,36 @@ function validMoves([x, y]) {
     .map(([dx, dy]) => [x + dx, y + dy])
     .filter(isValid);
 }
+
+// BFS to find shortest knight path
+function knightMoves(start, end) {
+  if (start[0] === end[0] && start[1] === end[1]) {
+    return [start]; // no movement needed
+  }
+
+  const queue = [];
+  const visited = new Set();
+  const parent = new Map(); // child -> parent mapping
+
+  queue.push(start);
+  visited.add(start.toString());
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+
+    for (const next of validMoves(current)) {
+      const key = next.toString();
+
+      if (!visited.has(key)) {
+        visited.add(key);
+        parent.set(key, current);
+
+        if (next[0] === end[0] && next[1] === end[1]) {
+          return buildPath(start, end, parent);
+        }
+
+        queue.push(next);
+      }
+    }
+  }
+}
