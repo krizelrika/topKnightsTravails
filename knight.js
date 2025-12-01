@@ -62,3 +62,14 @@ function buildPath(start, end, parent) {
   path.push(start);
   return path.reverse();
 }
+
+// Print result
+function printKnightPath(start, end) {
+  const path = knightMoves(start, end);
+
+  console.log(`You made it in ${path.length - 1} moves! Here is your path:`);
+  path.forEach(square => console.log(square));
+}
+
+// Export if needed
+module.exports = { knightMoves, printKnightPath };
