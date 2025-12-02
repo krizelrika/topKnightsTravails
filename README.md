@@ -11,3 +11,18 @@ This transforms the chessboard into a graph where:
 - Each square is a vertex
 - Each valid knight move is an edge
 - The problem becomes a shortest-path search on an unweighted graph
+
+## 🧠 Project Goals
+In completing this assignment, you practice:
+- Representing a chessboard as a graph
+- Applying BFS to find shortest paths
+- Using queues, visited sets, and parent mapping
+- Reconstructing paths using stored parent references
+- Breaking down a real-world problem into algorithms and data structures
+
+## 🚀 Features
+- Calculates the shortest sequence of moves a knight needs to reach a target square.
+- Validates moves to ensure they stay within the 8×8 grid.
+- Uses Breadth-First Search (BFS) to guarantee the shortest path.
+- Returns the exact squares visited, in order.
+- Allows flexible starting and ending coordinates like [0, 0].
