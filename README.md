@@ -26,3 +26,10 @@ In completing this assignment, you practice:
 - Uses Breadth-First Search (BFS) to guarantee the shortest path.
 - Returns the exact squares visited, in order.
 - Allows flexible starting and ending coordinates like [0, 0].
+
+## 🛠️ Possible Future Improvements
+- Visual ASCII chessboard output
+- GUI or web version
+- Allow custom board sizes
+- Detect unreachable nodes on non-standard boards
+
