@@ -33,3 +33,10 @@ In completing this assignment, you practice:
 - Allow custom board sizes
 - Detect unreachable nodes on non-standard boards
 
+## 📚 What I Learned about this topic
+- How BFS guarantees the shortest path in unweighted graphs
+- How to treat game boards as implicit graphs
+- Importance of visited sets to avoid loops
+- Path reconstruction using parent pointers
+- Translating real-world movement rules into algorithms
+
